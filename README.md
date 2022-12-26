@@ -13,6 +13,20 @@ USAGE
 
 PROGRAM STEPS (Review Quote)
 - Collect the information from the command line call
+- Using pd.read_excel(), reads the contents of the provided excel file
+- Create a temporary column (aka temp) that can be sliced apart to fill the new columns respectively
+- Preforms a nearly identical cleanup as the University Press Data Cleanup program (see UP_data_cleanup repository) on the data in the temp column
+- Iterates through the temp column, copying all of the text between the quotes and placing it in the text column in the same row
+- Performs a cleanup of the text column, removing all unnecessary punctuation, extra spacing, and cells without text.
+- Iterates through the temp column, removing the quotes and all text between them
+- Iterates through the temp column, pulling the sources of the quotes and placing them in the source column in the same row or skipping the cell if the quote doesn't contain a source
+- ###TO BE CONTINUED
+
+
+
+- Performs a cleanup of the text column, removing all unnecessary punctuation, extra spacing, and cells without text.
+
+
 
 My program that takes an excel file exported from a university press database and cleans up the raw quote data, then splits it into the text, the source, and the author of the quote.
 
